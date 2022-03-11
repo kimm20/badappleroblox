@@ -16,7 +16,7 @@ segs = 0
 lastframe = None
 while cap.isOpened():
         r, frame = cap.read()
-        frame = cv2.resize(frame, (60,40),cv2.INTER_AREA)
+        frame = cv2.resize(frame, (100,80),cv2.INTER_AREA)
         frame = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
         frame = np.round(np.round(frame/255,2)*100)
         frame = str(frame.tolist())
